@@ -1,0 +1,75 @@
+﻿@model SignUpModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@section Body{
+
+    <form method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label">BDate</label>
+                        <input type="date" asp-for="BDate" class="form-control" />
+                        <span asp-validation-for="BDate"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label">Username</label>
+                        <input type="text" asp-for="Username" class="form-control" />
+                        <span asp-validation-for="Username"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input type="text" asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <input type="password" asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label">Confirm Password</label>
+                        <input type="password" class="form-control" asp-for="ConfirmPassword" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Create Account" asp-action="CreateAccount" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+}
